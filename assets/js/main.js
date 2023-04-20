@@ -53,7 +53,7 @@ const { createApp } = Vue
 
         addItem(){
             if(this.newItem != ""){
-                this.todos.push({
+                this.todos.unshift({
                     text: this.newItem,
                     done: false
                 })
