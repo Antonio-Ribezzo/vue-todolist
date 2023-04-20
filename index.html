@@ -38,54 +38,10 @@
             <!-- list -->
             <div id="toDoList">
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item list-group-item-action">
+                    <li v-for="element in todos" class="list-group-item list-group-item-action">
                         <div class="d-flex justify-content-between align-items-center">
-                            <span>
-                                An item
-                            </span>
-                            <div>
-                                <i class="fa-solid fa-check me-4"></i>
-                                <i class="fa-solid fa-xmark"></i>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item list-group-item-action">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span>
-                                Second item
-                            </span>
-                            <div>
-                                <i class="fa-solid fa-check me-4"></i>
-                                <i class="fa-solid fa-xmark"></i>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item list-group-item-action">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span>
-                                Third item
-                            </span>
-                            <div>
-                                <i class="fa-solid fa-check me-4"></i>
-                                <i class="fa-solid fa-xmark"></i>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item list-group-item-action">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span>
-                                Fourth item
-                            </span>
-                            <div>
-                                <i class="fa-solid fa-check me-4"></i>
-                                <i class="fa-solid fa-xmark"></i>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item list-group-item-action">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span>
-                                Fifth item
+                            <span v-bind:class="(element.done == true)? 'lineThroughColor' : '' ">
+                                {{element.text}}
                             </span>
                             <div>
                                 <i class="fa-solid fa-check me-4"></i>

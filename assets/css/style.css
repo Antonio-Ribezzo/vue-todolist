@@ -14,4 +14,10 @@ span{
     cursor: pointer;
 }
 
+.lineThroughColor{
+    text-decoration: line-through;
+    -webkit-text-decoration-color: red;
+    text-decoration-color: red;
+}
+
 
