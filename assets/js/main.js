@@ -38,5 +38,17 @@ const { createApp } = Vue
         ]
         
       }
+    },
+
+    methods: {
+        deleteItem(i){
+            this.todos.splice(i, 1)
+        },
+
+        clearList(){
+            this.todos = null
+            
+        }
     }
+
   }).mount('#app')

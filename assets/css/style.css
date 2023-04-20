@@ -14,6 +14,14 @@ span{
     cursor: pointer;
 }
 
+.fa-xmark:hover{
+    color: red;
+}
+
+.fa-check:hover{
+    color: green;
+}
+
 .lineThroughColor{
     text-decoration: line-through;
     -webkit-text-decoration-color: red;
