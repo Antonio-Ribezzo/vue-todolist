@@ -35,7 +35,9 @@ const { createApp } = Vue
                 text: 'Fare il bucato',
                 done: false
             }
-        ]
+        ],
+
+        newItem: ""
         
       }
     },
@@ -46,8 +48,18 @@ const { createApp } = Vue
         },
 
         clearList(){
-            this.todos = null
-            
+            this.todos = []
+        },
+
+        addItem(){
+            if(this.newItem != ""){
+                this.todos.push({
+                    text: this.newItem,
+                    done: false
+                })
+            } else if (this.newItem == ""){
+                alert('Scrivi una nuova ToDo da inserire nella lista')
+            }
         }
     }
 

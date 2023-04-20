@@ -31,8 +31,8 @@
 
             <!-- input -->
             <div class="row text-center justify-content-around mb-4">
-                <input id="textinput" type="text" class="col-8">
-                <button class="col-2 btn btn-outline-success ms-2">New</button>
+                <input id="textinput" type="text" class="col-8" v-model="newItem">
+                <button class="col-2 btn btn-outline-success ms-2" @click="addItem">New</button>
             </div>
 
             <!-- list -->
@@ -53,12 +53,12 @@
             </div>
 
             <!-- button clear list -->
-            <div v-if="todos!=null" class="d-flex justify-content-center align-items-center">
+            <div v-if="todos!= 0" class="d-flex justify-content-center align-items-center">
                 <button class="col-2 btn btn-outline-danger mt-4" @click="clearList">Clear</button>
             </div>
 
             <!-- message case: list is empty -->
-            <div v-if="todos == null" class="d-flex justify-content-center align-items-center">
+            <div v-if="todos == 0" class="d-flex justify-content-center align-items-center">
                 <div class="alert alert-danger" role="alert">
                     To Do List is empty!!!
                 </div>
