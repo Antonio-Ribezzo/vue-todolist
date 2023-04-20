@@ -14,22 +14,32 @@ span{
     cursor: pointer;
 }
 
+i{
+    padding: 0.5rem;
+}
+
 .fa-xmark:hover{
-    color: red;
+    color: white;
+    border-radius: 50%;
+    background-color: lightcoral;
 }
 
 .fa-check:hover{
-    color: green;
+    color: white;
+    border-radius: 50%;
+    background-color: rgba(0, 128, 0, 0.631);
 }
 
 .colGreen{
-    color: green;
+    color: white;
+    border-radius: 50%;
+    background-color: green;
 }
 
 .lineThroughColor{
-    text-decoration: line-through;
-    -webkit-text-decoration-color: red;
-    text-decoration-color: red;
+    text-decoration: line-through 0.15rem;
+    -webkit-text-decoration-color: green;
+    text-decoration-color: green;
 }
 
 
