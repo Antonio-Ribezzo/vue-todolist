@@ -60,6 +60,14 @@ const { createApp } = Vue
             } else if (this.newItem == ""){
                 alert('Scrivi una nuova ToDo da inserire nella lista')
             }
+        },
+
+        changeDoneValue(i){
+            if(this.todos[i].done == true){
+                this.todos[i].done = false
+            } else if(this.todos[i].done == false){
+                this.todos[i].done = true
+            }
         }
     }
 

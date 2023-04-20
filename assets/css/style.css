@@ -22,6 +22,10 @@ span{
     color: green;
 }
 
+.colGreen{
+    color: green;
+}
+
 .lineThroughColor{
     text-decoration: line-through;
     -webkit-text-decoration-color: red;

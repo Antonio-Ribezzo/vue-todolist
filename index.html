@@ -40,11 +40,11 @@
                 <ul class="list-group list-group-flush">
                     <li v-for="(element, index) in todos" :key="index" class="list-group-item list-group-item-action">
                         <div class="d-flex justify-content-between align-items-center">
-                            <span v-bind:class="(element.done == true)? 'lineThroughColor' : '' ">
+                            <span v-bind:class="(element.done == true)? 'lineThroughColor' : '' " @click="changeDoneValue(index)">
                                 {{element.text}}
                             </span>
                             <div>
-                                <i class="fa-solid fa-check me-4"></i>
+                                <i class="fa-solid fa-check me-4" :class="(todos[index].done==true)? 'colGreen' : '' " @click="changeDoneValue(index)"></i>
                                 <i class="fa-solid fa-xmark" @click="deleteItem(index)"></i>
                             </div>
                         </div>
